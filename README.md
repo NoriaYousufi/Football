@@ -1,5 +1,5 @@
 # HCI-IV
 
 Contributers:
-Noria Yousufi
-Vincent van Rie 
+- Noria Yousufi
+- Vincent van Rie 
