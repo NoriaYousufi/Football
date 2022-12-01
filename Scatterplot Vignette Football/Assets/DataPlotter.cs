@@ -13,6 +13,7 @@ public class DataPlotter : MonoBehaviour
     {
         dropDownExample = dropDown.GetComponent<DropdownExample>();
     }
+    public static DataPlotter instance;
     // Name of the input file, no extension
     public string inputfile;
  
@@ -37,7 +38,7 @@ public class DataPlotter : MonoBehaviour
     public GameObject PointHolder;
 
     public float plotScale = 10;
-
+    
     // Use this for initialization
     void Start () {
     // Set pointlist to results of function Reader with argument inputfile
@@ -47,6 +48,8 @@ public class DataPlotter : MonoBehaviour
     Debug.Log(pointList);
     
     List<string> columnList = new List<string>(pointList[1].Keys);
+
+    Debug.Log(columnList);
 
     // Declare list of strings, fill with keys (column names)
     // public static List<string> columnList = new List<string>(pointList[1].Keys);
