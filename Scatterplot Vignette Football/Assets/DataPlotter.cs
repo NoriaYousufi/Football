@@ -13,7 +13,7 @@ public class DataPlotter : MonoBehaviour
     {
         dropDownExample = dropDown.GetComponent<DropdownExample>();
     }
-    public static DataPlotter instance;
+    //public static DataPlotter instance;
     // Name of the input file, no extension
     public string inputfile;
  
@@ -22,7 +22,7 @@ public class DataPlotter : MonoBehaviour
     public static List<Dictionary<string, object>> pointList;
  
     // Indices for columns to be assigned
-    public int columnX = 0; //dropDownExample.columnNames[index]
+    public int columnX = 0; //dropDownExample.dropdownValue
     public int columnY = 1;
     public int columnZ = 2;
     
@@ -41,6 +41,7 @@ public class DataPlotter : MonoBehaviour
     
     // Use this for initialization
     void Start () {
+    Debug.Log("Dataplotter value:" + dropDownExample.dropdownValue);
     // Set pointlist to results of function Reader with argument inputfile
     pointList = CSVReader.Read(inputfile);
  
@@ -61,9 +62,14 @@ public class DataPlotter : MonoBehaviour
     Debug.Log("Column name is " + key);
 
     // Assign column name from columnList to Name variables
-    xName = columnList[columnX];
+    xName = columnList[dropDownExample.dropdownValue];
     yName = columnList[columnY];
     zName = columnList[columnZ];
+
+    // Assign column labels to axis 
+    GameObject.Find("X_Title").GetComponent<TextMesh>().text = xName;
+    GameObject.Find("Y_Title").GetComponent<TextMesh>().text = yName;
+    GameObject.Find("Z_Title").GetComponent<TextMesh>().text = zName;
 
     //Loop through Pointlist
     for (var i = 0; i < pointList.Count; i++)
