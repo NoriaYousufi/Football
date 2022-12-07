@@ -7,12 +7,18 @@ using UnityEngine.UI;
 public class DataPlotter : MonoBehaviour
 {
     DropdownExample dropDownExample;
+    DropdownYaxis dropDownYaxis;
+    DropdownZaxis dropDownZaxis; 
     [SerializeField] GameObject dropDown;
 
     void Awake()
     {
         dropDownExample = dropDown.GetComponent<DropdownExample>();
+        dropDownYaxis = dropDown.GetComponent<DropdownYaxis>();
+        dropDownZaxis = dropDown.GetComponent<DropdownZaxis>();
     }
+
+    //DropdownYaxis dropDownYaxis;
     //public static DataPlotter instance;
     // Name of the input file, no extension
     public string inputfile;
@@ -63,8 +69,8 @@ public class DataPlotter : MonoBehaviour
 
     // Assign column name from columnList to Name variables
     xName = columnList[dropDownExample.dropdownValue];
-    yName = columnList[columnY];
-    zName = columnList[columnZ];
+    yName = columnList[dropDownYaxis.dropdownValue];
+    zName = columnList[dropDownZaxis.dropdownValue];
 
     // Assign column labels to axis 
     GameObject.Find("X_Title").GetComponent<TextMesh>().text = xName;

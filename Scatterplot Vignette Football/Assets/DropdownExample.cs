@@ -23,7 +23,7 @@ public class DropdownExample : MonoBehaviour
 
     // List<string> columnNames = new List<string>(dataPlotter.pointList[1].Keys);
     //"Rk", "Age", "Born", "MP", "Starts", "Min", "90s", "Goals", "Shots"
-    List<string> names = new List<string>() {"Rk", "Age", "Born", "MP", "Starts", "Min", "90s", "Goals", "Shots", "SoT", "SoT%", "G/Sh", "G/SoT", "ShoDist", "ShoFK", "ShoPK", "PKatt", "PasTotCmp", "PasTotAtt", "PasTotCmp%", "PasTotDist", "PasTotDist", "PasShoCmp", "PasShoAtt", "PasShoCmp%", "PasMedCmp", "PasMedAtt", "PasMedCmp%"};
+    List<string> names = new List<string>() {"Rk", "Age", "Born", "MP", "Starts", "Min", "90s", "Goals", "Shots", "SoT", "SoT%", "G/Sh", "G/SoT", "ShoDist", "ShoFK", "ShoPK", "PKatt", "PasTotCmp", "PasTotAtt", "PasTotCmp%", "PasTotDist", "PasTotPrgDist", "PasShoCmp", "PasShoAtt", "PasShoCmp%", "PasMedCmp", "PasMedAtt", "PasMedCmp%"};
 
     public Dropdown dropdown;
     public Text selectedAttribute;

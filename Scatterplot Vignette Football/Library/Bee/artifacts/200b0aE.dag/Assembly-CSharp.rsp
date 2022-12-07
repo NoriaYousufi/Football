@@ -357,6 +357,8 @@
 "Assets/DataPlotter.cs"
 "Assets/DisableOrEnableObject.cs"
 "Assets/DropdownExample.cs"
+"Assets/DropdownYaxis.cs"
+"Assets/DropdownZaxis.cs"
 "Assets/SampleScenes/Menu/Scripts/MenuSceneLoader.cs"
 "Assets/SampleScenes/Menu/Scripts/PauseMenu.cs"
 "Assets/SampleScenes/Menu/Scripts/SceneAndURLLoader.cs"
